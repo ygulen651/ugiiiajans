@@ -117,7 +117,6 @@ const clientLogos = [
   ["Karamanoğlu Ulak", "/ulak.png"],
   ["Saray Bisküvi", "/saray.svg"],
   ["Sıla Evde Bakım", "/sila-evde-bakim.png"],
-  ["Pamir Villaları", "/pamir-villalari.png"],
   ["Oslo", "/oslo.png"],
   ["Kartap", "/kartap.png"],
   ["İlkem", "/ilkem.png"],
@@ -174,7 +173,6 @@ export default function Home() {
         <div className="heroGrid" aria-hidden="true" />
         <Image className="heroMascot" src="/hero-owl.webp" alt="" width={1350} height={1165} priority />
         <div className="heroContent">
-          <p className="kicker"><Sparkles size={15} /> UGI Ajans</p>
           <h1>Dijital dünyada<br /><span>markanızı öne çıkarın.</span></h1>
           <div className="heroBottom">
             <p>Dijital dünyada markanızı öne çıkaracak profesyonel çözümler. Yenilikçi, hızlı ve etkileşimli.</p>

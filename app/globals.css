@@ -272,7 +272,9 @@ button, input, select, textarea { font: inherit; }
 .heroContent { z-index: 3; }
 .kicker { color: var(--ink); }
 .heroBottom p { color: rgba(11,11,11,.72); }
-.textButton { border-bottom-color: rgba(11,11,11,.7); }
+.hero .primaryButton, .hero .textButton { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; padding: 0 18px; color: #fff; background: #080808; border: 1px solid #080808; border-radius: 4px; font-weight: 800; }
+.hero .textButton { border-bottom: 1px solid #080808; }
+.hero .primaryButton:hover, .hero .textButton:hover { color: var(--ink); background: #fff; }
 .heroMascot { transform-origin: 58% 68%; backface-visibility: hidden; will-change: transform, filter; animation: mascotFlight 3.8s ease-in-out infinite, mascotGlow 1.9s ease-in-out infinite alternate; }
 .hero::after { content: ""; position: absolute; z-index: 1; top: -35%; right: -24%; width: 72%; height: 165%; pointer-events: none; background: linear-gradient(105deg, transparent 40%, rgba(255,212,0,.05) 46%, rgba(255,239,135,.28) 50%, rgba(255,212,0,.06) 54%, transparent 60%); transform: translateX(-140%) rotate(8deg); mix-blend-mode: screen; animation: heroShine 5.8s ease-in-out infinite; }
 .heroGrid { animation: gridPulse 3.6s ease-in-out infinite alternate; }
