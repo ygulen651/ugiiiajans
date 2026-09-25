@@ -133,31 +133,6 @@ const clientLogos = [
   ["Chubby Noodles", "/LOGO kopya.png"],
 ];
 
-const packages = [
-  {
-    name: "Başlangıç",
-    type: "Temel Paket",
-    price: "12.000 ₺",
-    description: "Modern, kullanıcı dostu ve SEO uyumlu bir web sitesi çözümü.",
-    features: ["WordPress Alt Yapısı", "Ana Sayfa + 5 Sayfalık İçerik", "Mobil Uyumlu Tasarım", "10 Tema Arasından Seçim", "Ücretsiz SSL Sertifikası", "Temel SEO Yapılandırması", "Online Form", "Ücretsiz Alan Adı (com.tr)", "Ücretsiz Web Hosting", "Kurumsal E-Posta (5 Adet)"],
-  },
-  {
-    name: "Profesyonel",
-    type: "Pro Paket",
-    price: "17.000 ₺",
-    description: "Daha fazla içerik, düzenleme ve ölçüm imkânı sunan kapsamlı paket.",
-    features: ["WordPress Alt Yapısı", "Ana Sayfa + 7 Sayfalık İçerik", "Mobil Uyumlu Tasarım", "20 Tema Arasından Seçim", "Ücretsiz SSL Sertifikası", "Temel SEO Yapılandırması", "Online Form", "Online Site Düzenleme", "Güvenlik Güncellemeleri", "Google Analytics + Facebook Pixel", "Ücretsiz Alan Adı (com.tr)", "Ücretsiz Premium Web Hosting", "Kurumsal E-Posta (35 Adet)"],
-    featured: true,
-  },
-  {
-    name: "Gelişmiş",
-    type: "Ultra Paket",
-    price: "24.000 ₺",
-    description: "Gelişmiş SEO, e-ticaret desteği ve geniş içerik yapısı.",
-    features: ["WordPress Alt Yapısı", "Ana Sayfa + 30 Sayfalık İçerik", "Mobil Uyumlu Tasarım", "50 Premium Tema Arasından Seçim", "Ücretsiz SSL Sertifikası", "Gelişmiş SEO Yapılandırması", "Online Form", "Online Site Düzenleme", "Güvenlik Güncellemeleri", "Google Analytics + Facebook Pixel", "Google Shopping", "Yandex Meta", "Ücretsiz Alan Adı (com/net/com.tr)", "Ücretsiz Premium Web Hosting", "Kurumsal E-Posta (100 Adet)"],
-  },
-];
-
 function Header() {
   const [open, setOpen] = useState(false);
   return (
@@ -167,7 +142,7 @@ function Header() {
       </a>
       <nav className={open ? "nav navOpen" : "nav"} aria-label="Ana menü">
         <a href="#hizmetler" onClick={() => setOpen(false)}>Hizmetler</a>
-        <a href="#paketler" onClick={() => setOpen(false)}>Web Sitesi Paketleri</a>
+        <a href="#web-paketleri" onClick={() => setOpen(false)}>Çalışmalarımız</a>
         <a href="#hakkimizda" onClick={() => setOpen(false)}>Hakkımızda</a>
         <a href="#iletisim" onClick={() => setOpen(false)}>İletişim</a>
       </nav>
@@ -198,7 +173,6 @@ export default function Home() {
       <section className="hero">
         <div className="heroGrid" aria-hidden="true" />
         <Image className="heroMascot" src="/hero-owl.webp" alt="" width={1350} height={1165} priority />
-        <div className="heroTopline"><span>Karaman · Türkiye</span><span>Yenilikçi · Hızlı · Etkili</span></div>
         <div className="heroContent">
           <p className="kicker"><Sparkles size={15} /> UGI Ajans</p>
           <h1>Dijital dünyada<br /><span>markanızı öne çıkarın.</span></h1>
@@ -206,7 +180,7 @@ export default function Home() {
             <p>Dijital dünyada markanızı öne çıkaracak profesyonel çözümler. Yenilikçi, hızlı ve etkileşimli.</p>
             <div className="heroActions">
               <a className="primaryButton" href="#hizmetler">Hizmetlerimizi keşfet <ArrowRight size={18} /></a>
-              <a className="textButton" href="#paketler">Paketleri incele</a>
+              <a className="textButton" href="#web-paketleri">Çalışmalarımız</a>
             </div>
           </div>
         </div>
@@ -300,26 +274,6 @@ export default function Home() {
         <div><strong>Etkili</strong><span>profesyonel yaklaşım</span></div>
       </section>
 
-      <section className="packages sectionPad" id="paketler">
-        <div className="packageHeading">
-          <p className="sectionLabel">Web Sitesi Paketleri</p>
-          <h2>Web siteniz ile<br />yayına geçin.</h2>
-          <p>Web site paketlerimiz, her sektöre uygun modern, kullanıcı dostu ve SEO uyumlu çözümler sunar. Tüm web sitesi paketlerimiz ücretsiz alan adı ve hosting ile birlikte sunulmaktadır.</p>
-        </div>
-        <div className="packageGrid">
-          {packages.map((item) => (
-            <article className={item.featured ? "packageCard packageFeatured" : "packageCard"} key={item.type}>
-              <span className="packageBadge">{item.name}</span>
-              <h3>{item.type}</h3>
-              <strong className="packagePrice">{item.price}</strong>
-              <p>{item.description}</p>
-              <ul>{item.features.map((feature) => <li key={feature}><Check size={15} />{feature}</li>)}</ul>
-              <a href="#iletisim">Satın Al <ArrowRight size={17} /></a>
-            </article>
-          ))}
-        </div>
-      </section>
-
       <section className="testimonial sectionPad">
         <div className="testimonialMark">“</div>
         <blockquote>Profesyonel ve ihtiyaçlarınıza uygun bir web sitesiyle hedef kitlenize ulaşabilir, işletmenizin online görünürlüğünü artırabilirsiniz.</blockquote>
@@ -345,7 +299,7 @@ export default function Home() {
       <footer className="footer sectionPad">
         <a className="logo footerLogo" href="#top" aria-label="UGI ana sayfa"><Image className="brandLogo" src="/LOGOa.png" alt="UGI" width={4351} height={3383} /></a>
         <p>Dijital dünyada markanızı öne çıkaracak profesyonel çözümler.</p>
-        <div><a href="#hakkimizda">Hakkımızda</a><a href="#hizmetler">Hizmetler</a><a href="#paketler">Paketler</a><a href="#iletisim">İletişim</a></div>
+        <div><a href="#hakkimizda">Hakkımızda</a><a href="#hizmetler">Hizmetler</a><a href="#web-paketleri">Çalışmalarımız</a><a href="#iletisim">İletişim</a></div>
         <div className="footerMeta">
           <span>© 2026 UGI Ajans</span>
         </div>

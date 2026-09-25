@@ -20,7 +20,7 @@ button, input, select, textarea { font: inherit; }
 .announcement { position: absolute; z-index: 22; top: 0; left: 0; width: 100%; min-height: 38px; display: flex; align-items: center; justify-content: center; gap: 28px; padding: 8px 20px; color: var(--ink); background: var(--acid); font-size: 12px; font-weight: 700; }
 .announcement > span { text-transform: uppercase; }
 .announcement a { display: inline-flex; align-items: center; gap: 7px; padding-bottom: 1px; border-bottom: 1px solid currentColor; }
-.header { position: absolute; z-index: 20; top: 38px; left: 0; width: 100%; height: 86px; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(20px, 5vw, 76px); color: #fff; border-bottom: 1px solid rgba(255,255,255,.2); }
+.header { position: absolute; z-index: 20; top: 38px; left: 0; width: 100%; height: 86px; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(20px, 5vw, 76px); color: #fff; background: #080808; border-bottom: 1px solid rgba(255,255,255,.2); }
 .logo { display: flex; align-items: center; gap: 10px; font: 800 24px "Manrope", sans-serif; }
 .logoMark { width: 36px; height: 36px; display: grid; place-items: center; color: var(--ink); background: var(--acid); border-radius: 50%; }
 .logoLight { margin-left: 2px; color: var(--acid); font-size: 10px; vertical-align: top; }
@@ -265,9 +265,35 @@ button, input, select, textarea { font: inherit; }
 /* UGI brand artwork */
 .brandLogo { display: block; width: 72px; height: 56px; object-fit: contain; }
 .footerLogo .brandLogo { width: 92px; height: 72px; }
-.hero { background: radial-gradient(circle at 78% 49%, #494018 0%, #1c1b13 34%, #090909 75%); }
-.hero::before { background: linear-gradient(90deg, rgba(0,0,0,.58), transparent 72%); }
-.heroMascot { position: absolute; z-index: 1; right: -3vw; bottom: 4%; width: min(55vw, 780px); height: auto; object-fit: contain; filter: drop-shadow(0 20px 45px rgba(0,0,0,.45)); }
+.hero { color: var(--ink); background: radial-gradient(circle at 78% 47%, #fff59a 0%, #ffe100 36%, #ffd400 72%, #ffca00 100%); }
+.hero::before { background: linear-gradient(90deg, rgba(255,244,120,.22), transparent 68%); }
+.heroGrid { background-image: linear-gradient(rgba(11,11,11,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(11,11,11,.18) 1px, transparent 1px); }
+.heroMascot { position: absolute; z-index: 4; right: -2vw; bottom: 2%; width: min(60vw, 860px); height: auto; object-fit: contain; filter: drop-shadow(0 28px 48px rgba(0,0,0,.48)); }
+.heroContent { z-index: 3; }
+.kicker { color: var(--ink); }
+.heroBottom p { color: rgba(11,11,11,.72); }
+.textButton { border-bottom-color: rgba(11,11,11,.7); }
+.heroMascot { transform-origin: 58% 68%; backface-visibility: hidden; will-change: transform, filter; animation: mascotFlight 3.8s ease-in-out infinite, mascotGlow 1.9s ease-in-out infinite alternate; }
+.hero::after { content: ""; position: absolute; z-index: 1; top: -35%; right: -24%; width: 72%; height: 165%; pointer-events: none; background: linear-gradient(105deg, transparent 40%, rgba(255,212,0,.05) 46%, rgba(255,239,135,.28) 50%, rgba(255,212,0,.06) 54%, transparent 60%); transform: translateX(-140%) rotate(8deg); mix-blend-mode: screen; animation: heroShine 5.8s ease-in-out infinite; }
+.heroGrid { animation: gridPulse 3.6s ease-in-out infinite alternate; }
+.hero h1 span { color: transparent; background: linear-gradient(90deg, #0b0b0b 0%, #705300 42%, #0b0b0b 68%); background-size: 220% auto; -webkit-background-clip: text; background-clip: text; animation: textShine 3.2s linear infinite; }
+@keyframes mascotFlight {
+  0%, 100% { transform: translate3d(0, 8px, 0) rotate(-2.5deg) scale(1); }
+  25% { transform: translate3d(-14px, -8px, 0) rotate(-.5deg) scale(1.015); }
+  50% { transform: translate3d(-4px, -28px, 0) rotate(2.5deg) scale(1.03); }
+  75% { transform: translate3d(12px, -10px, 0) rotate(.5deg) scale(1.015); }
+}
+@keyframes mascotGlow {
+  from { filter: drop-shadow(0 20px 42px rgba(0,0,0,.48)) drop-shadow(0 0 6px rgba(255,212,0,.14)); }
+  to { filter: drop-shadow(0 32px 54px rgba(0,0,0,.58)) drop-shadow(0 0 38px rgba(255,212,0,.62)); }
+}
+@keyframes heroShine {
+  0%, 18% { transform: translateX(-145%) rotate(8deg); opacity: 0; }
+  28% { opacity: 1; }
+  55%, 100% { transform: translateX(155%) rotate(8deg); opacity: 0; }
+}
+@keyframes gridPulse { from { opacity: .07; } to { opacity: .16; } }
+@keyframes textShine { to { background-position: -220% center; } }
 .heroContent { max-width: 850px; }
 .hero h1 { font-size: clamp(52px, 6.5vw, 96px); }
 .heroBottom { grid-template-columns: 1fr; max-width: 560px; }
@@ -303,7 +329,7 @@ button, input, select, textarea { font: inherit; }
   .processMascot, .faqMascot { width: 230px; }
   .logoGroup { gap: 14px; padding-right: 14px; }
   .clientLogo { flex-basis: 165px; }
-  .heroMascot { right: -10%; bottom: 13%; width: min(72vw, 650px); opacity: .72; }
+  .heroMascot { right: -10%; bottom: 13%; width: min(72vw, 650px); opacity: 1; }
   .heroContent { right: 20px; }
   .introMascot { left: 0; width: 300px; opacity: .28; }
   .intro > div { grid-column: 1; }
@@ -323,7 +349,7 @@ button, input, select, textarea { font: inherit; }
   .clientLogo img { height: 66px; }
   .brandLogo { width: 62px; height: 48px; }
   .hero { min-height: 850px; }
-  .heroMascot { top: 125px; right: -17%; bottom: auto; width: 105vw; opacity: .65; }
+  .heroMascot { top: 125px; right: -17%; bottom: auto; width: 105vw; opacity: 1; }
   .heroContent { bottom: 45px; }
   .hero h1 { font-size: clamp(42px, 11vw, 58px); }
   .heroBottom p { max-width: 100%; }
@@ -335,4 +361,5 @@ button, input, select, textarea { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .logoTrack { animation: none; }
   .logos { overflow-x: auto; }
+  .heroMascot, .heroGrid, .hero::after, .hero h1 span { animation: none !important; }
 }
