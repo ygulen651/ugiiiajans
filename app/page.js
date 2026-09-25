@@ -115,11 +115,9 @@ const projects = [
 
 const clientLogos = [
   ["Karamanoğlu Ulak", "/ulak.png"],
-  ["Saray Bisküvi", "/saray.svg"],
-  ["Sıla Evde Bakım", "/sila-evde-bakim.png"],
+  ["Saray Bisküvi", "/saray.png"],
   ["Oslo", "/oslo.png"],
   ["Kartap", "/kartap.png"],
-  ["İlkem", "/ilkem.png"],
   ["Detay Sigorta", "/detay-sigorta.png"],
   ["Chubby", "/chubby.png"],
   ["Ani", "/ani.png"],
@@ -129,7 +127,6 @@ const clientLogos = [
   ["İKEV", "/İkev logo.png"],
   ["R Yapım", "/Çalışma Yüzeyi 1@4x.png"],
   ["Torio", "/Varlik-1.png"],
-  ["Chubby Noodles", "/LOGO kopya.png"],
 ];
 
 function Header() {

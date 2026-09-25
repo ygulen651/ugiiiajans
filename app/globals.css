@@ -268,7 +268,7 @@ button, input, select, textarea { font: inherit; }
 .hero { color: var(--ink); background: radial-gradient(circle at 78% 47%, #fff59a 0%, #ffe100 36%, #ffd400 72%, #ffca00 100%); }
 .hero::before { background: linear-gradient(90deg, rgba(255,244,120,.22), transparent 68%); }
 .heroGrid { background-image: linear-gradient(rgba(11,11,11,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(11,11,11,.18) 1px, transparent 1px); }
-.heroMascot { position: absolute; z-index: 4; right: -2vw; bottom: 2%; width: min(60vw, 860px); height: auto; object-fit: contain; filter: drop-shadow(0 28px 48px rgba(0,0,0,.48)); }
+.heroMascot { position: absolute; z-index: 4; right: -1vw; bottom: 3%; width: min(57vw, 820px); height: auto; object-fit: contain; filter: drop-shadow(0 28px 48px rgba(0,0,0,.48)); }
 .heroContent { z-index: 3; }
 .kicker { color: var(--ink); }
 .heroBottom p { color: rgba(11,11,11,.72); }
@@ -307,7 +307,7 @@ button, input, select, textarea { font: inherit; }
 .intro .lead { margin-right: 22%; }
 .contact { overflow: hidden; }
 .contactIntro { position: relative; }
-.contactMascot { display: block; width: min(34vw, 420px); height: auto; margin: 32px 0 -130px auto; }
+.contactMascot { display: block; width: min(34vw, 420px); height: auto; margin: 32px 0 -395px auto; transform: translateY(-265px); }
 .logos { display: block; overflow: hidden; width: 100%; }
 .logoTrack { display: flex; width: max-content; animation: logoScroll 38s linear infinite; }
 .logoGroup { display: flex; flex: 0 0 auto; align-items: stretch; gap: 18px; padding-right: 18px; }
@@ -331,12 +331,12 @@ button, input, select, textarea { font: inherit; }
   .processMascot, .faqMascot { width: 230px; }
   .logoGroup { gap: 14px; padding-right: 14px; }
   .clientLogo { flex-basis: 165px; }
-  .heroMascot { right: -10%; bottom: 13%; width: min(72vw, 650px); opacity: 1; }
+  .heroMascot { right: -7%; bottom: 13%; width: min(68vw, 620px); opacity: 1; }
   .heroContent { right: 20px; }
   .introMascot { left: 0; width: 300px; opacity: .28; }
   .intro > div { grid-column: 1; }
   .intro .lead { margin-right: 0; }
-  .contactMascot { width: 320px; margin-bottom: -90px; }
+  .contactMascot { width: 320px; margin-bottom: -240px; transform: translateY(-150px); }
 }
 
 @media (max-width: 600px) {
@@ -351,13 +351,13 @@ button, input, select, textarea { font: inherit; }
   .clientLogo img { height: 66px; }
   .brandLogo { width: 62px; height: 48px; }
   .hero { min-height: 850px; }
-  .heroMascot { top: 125px; right: -17%; bottom: auto; width: 105vw; opacity: 1; }
+  .heroMascot { top: 135px; right: -10%; bottom: auto; width: 95vw; opacity: 1; }
   .heroContent { bottom: 45px; }
   .hero h1 { font-size: clamp(42px, 11vw, 58px); }
   .heroBottom p { max-width: 100%; }
   .intro { padding-bottom: 90px; }
   .introMascot { position: relative; left: -10%; bottom: auto; width: 300px; max-width: 90vw; margin: 24px 0 -90px; opacity: 1; }
-  .contactMascot { width: min(78vw, 320px); margin-bottom: -70px; }
+  .contactMascot { width: min(78vw, 320px); margin-bottom: -150px; transform: translateY(-80px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
